@@ -1,17 +1,17 @@
 import {Component} from "react";
-
+import '../index.css'
 export class Header extends Component{
     render() {
         return (
             <>
                 <header>
-                    <nav className="header-fixed" style={{position: "fixed", zIndex: 2, left: 0, right: 0}}>
+                    <nav className="header-fixed" style={{position: "fixed", zIndex: 1, left: 0, right: 0}}>
                         <div style={{backgroundColor: "#fffafa"}}
                              className="d-flex align-items-center justify-content-center py-3 border-bottom">
                             <a href="#"
                                className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-                               style={{marginRight: -220 + "px"}}>
-                                <img width="40px" style={{marginLeft: 100}}
+                               style={{marginRight: -180 + "px"}}>
+                                <img width="40px" style={{marginLeft: 70+"px"}}
                                      src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png" alt=""/>
                             </a>
                             <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -95,8 +95,8 @@ export class Header extends Component{
                         </div>
                     </nav>
                 </header>
-                </>
-    )
+            </>
+        )
     }
 
-    }
+}
