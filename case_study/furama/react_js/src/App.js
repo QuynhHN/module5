@@ -23,10 +23,10 @@ function App() {
             {/*<CreateFacility/>*/}
             {/*<ListFacility/>*/}
             {/*<UpdateFacility/>*/}
-            <ListCustomer/>
+            {/*<ListCustomer/>*/}
             {/*<CreateCustomer/>*/}
             {/*<UpdateCustomer/>*/}
-            {/*<ListContract/>*/}
+            <ListContract/>
             {/*<CreateContract/>*/}
         </>
     );

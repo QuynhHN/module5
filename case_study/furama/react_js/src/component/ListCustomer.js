@@ -2,6 +2,7 @@ import {Component} from "react";
 import {Header} from "./Header";
 import {Footer} from "./Footer";
 import {customerData} from "../data/CustomerData";
+import {customerType} from "../data/CustomerData";
 
 export class ListCustomer extends Component {
     render() {
@@ -80,7 +81,11 @@ export class ListCustomer extends Component {
                                     <td>{customer.citizenIdentification}</td>
                                     <td>{customer.phone}</td>
                                     <td>{customer.email}</td>
-                                    <td>{customer.customerType}</td>
+                                    <td>{customerType.find(
+                                        (customerType) =>customerType.id===customer.customerType)?.nameType
+                                    }
+
+                                    </td>
                                     <td>{customer.address}</td>
                                     <td>
                                         {/*button edit, delete*/}

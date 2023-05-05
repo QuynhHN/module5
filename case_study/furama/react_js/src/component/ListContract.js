@@ -1,9 +1,10 @@
 import {Component} from "react";
 import {Header} from "./Header";
 import {Footer} from "./Footer";
+import {contractData} from "../data/ContractData";
 
 export class ListContract extends Component {
-    
+
     render() {
         return (
             <>
@@ -66,30 +67,32 @@ export class ListContract extends Component {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td scope="row">1</td>
-                                    <td>SV-0001</td>
-                                    <td>23-03-2023</td>
-                                    <td>25-05-2023</td>
-                                    <td>500.000.000</td>
-                                    <td>2.000.000.000</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">2</td>
-                                    <td>SV-0002</td>
-                                    <td>23-03-2023</td>
-                                    <td>25-05-2023</td>
-                                    <td>500.000.000</td>
-                                    <td>2.000.000.000</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">3</td>
-                                    <td>SV-0003</td>
-                                    <td>23-03-2023</td>
-                                    <td>25-05-2023</td>
-                                    <td>500.000.000</td>
-                                    <td>2.000.000.000</td>
-                                </tr>
+                                {contractData.map((contract, index) => (
+                                    <tr>
+                                        <td scope="row">{contract.id}</td>
+                                        <td>{contract.idContract}</td>
+                                        <td>{contract.startDay}</td>
+                                        <td>{contract.endDate}</td>
+                                        <td>{contract.advanceDeposit}</td>
+                                        <td>{contract.totalPayment}</td>
+                                    </tr>
+                                    // <tr>
+                                    //     <td scope="row">2</td>
+                                    //     <td>SV-0002</td>
+                                    //     <td>23-03-2023</td>
+                                    //     <td>25-05-2023</td>
+                                    //     <td>500.000.000</td>
+                                    //     <td>2.000.000.000</td>
+                                    // </tr>
+                                    // <tr>
+                                    //     <td scope="row">3</td>
+                                    //     <td>SV-0003</td>
+                                    //     <td>23-03-2023</td>
+                                    //     <td>25-05-2023</td>
+                                    //     <td>500.000.000</td>
+                                    //     <td>2.000.000.000</td>
+                                    // </tr>
+                                ))}
                                 </tbody>
                             </table>
                         </div>

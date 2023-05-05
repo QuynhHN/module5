@@ -1,28 +1,28 @@
 export const customerType =[
     {
-        id:'1',
-        name:'Diamond'
+        id:1,
+        nameType:'Diamond'
     },
     {
-        id:'2',
-        name:'Platinium'
+        id:2,
+        nameType:'Platinium'
     },
     {
-        id:'3',
-        name:'Gold'
+        id:3,
+        nameType:'Gold'
     },
     {
-        id:'4',
-        name:'Silver'
+        id:4,
+        nameType:'Silver'
     },
     {
-        id:'5',
-        name:'Member'
+        id:5,
+        nameType:'Member'
     }
 ]
 export const customerData=[
     {
-        id: '1',
+        id: 1,
         name: 'Nguyễn Văn A',
         dateOfBirth: '13-01-2000',
         gender: 'Nam',
@@ -33,7 +33,7 @@ export const customerData=[
         address: '123 Hoàng Văn Thụ, Đà Nẵng'
     },
     {
-        id: '2',
+        id: 2,
         name: 'Nguyễn Văn A',
         dateOfBirth: '13-01-2000',
         gender: 'Nam',
@@ -44,7 +44,7 @@ export const customerData=[
         address: '123 Nguyễn Hoàng, Đà Nẵng'
     },
     {
-        id: '3',
+        id: 3,
         name: 'Nguyễn Văn C',
         dateOfBirth: '13-01-2000',
         gender: 'Nam',
