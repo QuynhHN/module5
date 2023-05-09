@@ -22,10 +22,10 @@ export function Create() {
                         console.log(values);
                         try {
                             await libraryService.save(values)
-                            toast("Added failed");
-                        } catch (error) {
                             toast("Added successful");
                             navigate("/");
+                        } catch (error) {
+                            toast("Added failed");
                         }
                         setSubmitting(false);
                     };

@@ -5,20 +5,25 @@ import { toast } from "react-toastify";
 
 export function List() {
     const [bookList, setBookList] = useState([]);
+    const [deletedId, setDeletedId] = useState();
+    const handleTransferId = (id) => {
+        setDeletedId(id)
+    }
+
     useEffect(() => {
         const listAllBook = async () => {
             const result = await libraryService.findAll();
             setBookList(result);
         };
         listAllBook();
-    }, []);
+    }, [deletedId]);
 
-    const handleDelete = async (id) => {
+    const handleDelete = async () => {
         try {
-            await libraryService.remove(id)
-            toast.success("Deleted failed!");
-        } catch (error) {
+            await libraryService.remove(deletedId)
             toast.success("Deleted successfully!");
+        } catch (error) {
+            toast.success("Deleted failed!");
         }
     };
 
@@ -37,7 +42,7 @@ export function List() {
                 </tr>
                 </thead>
                 <tbody>
-                {bookList.map((book) => {
+                {bookList?.map((book) => {
                     return (
                         <tr key={book.id}>
                             <td>{book.title}</td>
@@ -49,10 +54,16 @@ export function List() {
                                 >
                                     Edit
                                 </NavLink>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger"
-                                    onClick={() => handleDelete(book.id)}
+                                {/*<button*/}
+                                {/*    type="button"*/}
+                                {/*    className="btn btn-danger"*/}
+                                {/*    onClick={() => handleDelete(book.id)}*/}
+                                {/*>*/}
+                                {/*    Delete*/}
+                                {/*</button>*/}
+                                <button type="button" className="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"
+                                    onClick={() => handleTransferId(book.id)}
                                 >
                                     Delete
                                 </button>
@@ -62,6 +73,25 @@ export function List() {
                 })}
                 </tbody>
             </table>
+            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Delete book</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                            Are you sure delete ?
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => handleDelete()}>Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }

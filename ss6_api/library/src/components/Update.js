@@ -8,9 +8,11 @@ import {Oval} from "react-loader-spinner";
 export function Update() {
     const navigate = useNavigate();
     const param = useParams();
+
     const [book, setBook] = useState();
 
     useEffect(() => {
+        console.log(param.id)
         async function getBookDetail() {
             const bookDetail = await libraryService.findById(param.id);
             setBook(bookDetail.data);
@@ -52,10 +54,10 @@ export function Update() {
                         console.log(values);
                         try {
                             await libraryService.edit(values)
-                            toast("Update failed");
-                        } catch (error) {
                             toast("Update successful");
                             navigate("/");
+                        } catch (error) {
+                            toast("Update failed");
                         }
 
                         setSubmitting(false);

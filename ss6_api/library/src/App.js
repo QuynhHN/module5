@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element = {<List />} />
           <Route path='/create' element = {<Create />} />
-          <Route path='/update/:id'
+          <Route path='/edit/:id'
                  element={<Update />}
           />
         </Routes>
