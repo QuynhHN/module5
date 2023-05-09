@@ -51,7 +51,7 @@ export function Update() {
                     const create = async () => {
                         console.log(values);
                         try {
-                            await bookManagementService.edit(values)
+                            await libraryService.edit(values)
                             toast("Update failed");
                         } catch (error) {
                             toast("Update successful");

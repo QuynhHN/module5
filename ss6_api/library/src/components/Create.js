@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import * as bookManagementService from "../service/bookManagementService";
+import * as libraryService from "../service/libraryService";
 import { toast } from "react-toastify";
 import { useNavigate, NavLink } from "react-router-dom";
 import { Oval } from "react-loader-spinner";
@@ -21,7 +21,7 @@ export function Create() {
                     const create = async () => {
                         console.log(values);
                         try {
-                            await bookManagementService.save(values)
+                            await libraryService.save(values)
                             toast("Added failed");
                         } catch (error) {
                             toast("Added successful");
