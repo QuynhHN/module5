@@ -6,9 +6,9 @@ import {NavLink} from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import { format } from "date-fns"
 import {toast} from "react-toastify";
-
+import {useNavigate} from "react-router-dom"
 export function Book() {
-    const navigate = useState()
+    const navigate = useNavigate()
     const [books, setBooks] = useState([])
     const [bookTypes, setBookTypes] = useState([])
 
