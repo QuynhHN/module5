@@ -1,0 +1,58 @@
+{
+  "bookType": [
+    {
+      "id": 1,
+      "nameType": "Truyện tranh"
+    },
+    {
+      "id": 2,
+      "nameType": "Tiểu thuyết"
+    },
+    {
+      "id": 3,
+      "nameType": "Self-help"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "code": "BO-1234",
+      "name": "Doraemon",
+      "bookType": 1,
+      "importedDate": "2012/07/21",
+      "quantity": 12
+    },
+    {
+      "id": 2,
+      "code": "BO-0456",
+      "name": "Tam Quốc Chí",
+      "bookType": 2,
+      "importedDate": "2012/07/21",
+      "quantity": 24
+    },
+    {
+      "id": 3,
+      "code": "BO-1234",
+      "name": "Đắc nhân tâm",
+      "bookType": 3,
+      "importedDate": "2012/07/21",
+      "quantity": 23
+    },
+    {
+      "id": 4,
+      "code": "BO-0456",
+      "name": "Tam Quốc Chí",
+      "bookType": 2,
+      "importedDate": "2012/07/21",
+      "quantity": 24
+    },
+    {
+      "id": 5,
+      "code": "BO-1234",
+      "name": "Đắc nhân tâm",
+      "bookType": 3,
+      "importedDate": "1998/07/16",
+      "quantity": 23
+    }
+  ]
+}

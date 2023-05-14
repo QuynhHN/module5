@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class='row mx-0 d-flex justify-content-center'>
+    <div class='col-3'>
+        <h2 class='text-center fw-bold'>Thêm mới</h2>
+
+        <form>
+            <div class="form-group">
+                <label htmlFor="code">Mã </label>
+                <input type="text"
+                       class="form-control" name="code" id="code" placeholder=""/>
+            </div>
+
+
+            <!-- radio-->
+            <div class="form-group">
+            <input type="radio" name="gender"  value="Nam"/>
+            Nam
+            <input
+                    type="radio"
+                    name="gender"
+                    value="Nữ"
+            />
+            Nữ
+            </div>
+            <!--select-->
+            <div class="form-group">
+                <label htmlFor="bookType">Thể loại</label>
+                <input as='select' name="" id="" class='form-select'>
+
+                <option key="" value=>
+
+                </option>
+
+
+                </input>
+            </div>
+            <div class="form-group">
+                <label htmlFor="">Ngày</label>
+                <input type="date"
+                       class="form-control" name="date" id="date" placeholder=""/>
+
+            </div>
+            <
+            <ErrorMessage name='date' component='span'
+                          class='form-err'/>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Xác nhận</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
