@@ -1,58 +1,50 @@
 {
-  "bookType": [
+  "typeProduct": [
     {
       "id": 1,
-      "nameType": "Truyện tranh"
+      "typeName": "Áo"
     },
     {
       "id": 2,
-      "nameType": "Tiểu thuyết"
+      "typeName": "Quần"
     },
     {
       "id": 3,
-      "nameType": "Self-help"
+      "typeName": "Váy"
     }
   ],
-  "books": [
+  "product": [
     {
       "id": 1,
-      "code": "BO-1234",
-      "name": "Doraemon",
-      "bookType": 1,
-      "importedDate": "2012/07/21",
-      "quantity": 12
+      "code": "a-001",
+      "name": "Áo sơ mi",
+      "importedDate": "2021/02/03",
+      "quantity": 15,
+      "typeProduct": 1
     },
     {
       "id": 2,
-      "code": "BO-0456",
-      "name": "Tam Quốc Chí",
-      "bookType": 2,
-      "importedDate": "2012/07/21",
-      "quantity": 24
+      "code": "a-002",
+      "name": "Quần nam",
+      "importedDate": "2022/02/03",
+      "quantity": 13,
+      "typeProduct": 2
     },
     {
       "id": 3,
-      "code": "BO-1234",
-      "name": "Đắc nhân tâm",
-      "bookType": 3,
-      "importedDate": "2012/07/21",
-      "quantity": 23
+      "code": "a-003",
+      "name": "Chân váy nữ",
+      "importedDate": "2023/05/03",
+      "quantity": 14,
+      "typeProduct": 3
     },
     {
-      "id": 4,
-      "code": "BO-0456",
-      "name": "Tam Quốc Chí",
-      "bookType": 2,
-      "importedDate": "2012/07/21",
-      "quantity": 24
-    },
-    {
-      "id": 5,
-      "code": "BO-1234",
-      "name": "Đắc nhân tâm",
-      "bookType": 3,
-      "importedDate": "1998/07/16",
-      "quantity": 23
+      "code": "aqq",
+      "name": "qww",
+      "importedDate": "2023-05-02",
+      "quantity": "12",
+      "typeProduct": 1,
+      "id": 4
     }
   ]
 }
